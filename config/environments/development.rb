@@ -69,6 +69,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   if (gitpod_workspace_url = ENV["GITPOD_WORKSPACE_URL"])
-    config.host << "3000-" + URI.parse(gitpod_workspace_url).host
+    config.hosts << "3000-" + URI.parse(gitpod_workspace_url).host
   end
 end
